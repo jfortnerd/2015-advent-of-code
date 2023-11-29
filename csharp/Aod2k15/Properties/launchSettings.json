@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Aod2k15": {
+      "commandName": "Project",
+      "commandLineArgs": "day 1"
+    }
+  }
+}
