@@ -41,6 +41,18 @@ namespace Jfortnerd.Aod2k15.Dailies
 
         public abstract void RunSolution();
 
+        public void AppendSolution(String output)
+        {
+            if ((Solution.Equals("")) || (Solution == null)) 
+            {
+                Solution = output;
+            }
+            else
+            {
+                Solution = Solution + "\n" + output;
+            }
+        }
+
         private String GetInputFileName(int dayNum)
         {
             if (dayNum >= 10)
@@ -121,6 +133,8 @@ namespace Jfortnerd.Aod2k15.Dailies
             String outputDir = "D:\\source\\2015-advent-of-code\\csharp\\output\\";
             String fileName = GetOutputFileName(dayNum);
             String fullPath = outputDir + fileName;
+
+            Console.WriteLine(Solution);
 
             File.WriteAllBytes(fullPath, Encoding.UTF8.GetBytes(Solution));
         }

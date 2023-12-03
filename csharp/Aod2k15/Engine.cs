@@ -75,7 +75,7 @@ namespace Jfortnerd.Aod2k15
             }
             else
             {
-                DisplayError("Uncaught Error.", ErrorType.Arguments);
+                DisplayError("Argument does not exist: " + args[0], ErrorType.Arguments);
             }
 
             Thread.Sleep(3000);
@@ -172,6 +172,9 @@ namespace Jfortnerd.Aod2k15
             {
                 case 1:
                     currentProblem = new Day01();
+                    break;
+                case 2:
+                    currentProblem = new Day02();
                     break;
                 default:
                     DisplayError("Day " + currentDay + " not implemented.", ErrorType.NotImplemented);
